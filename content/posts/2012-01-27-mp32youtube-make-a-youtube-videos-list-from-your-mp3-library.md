@@ -3,7 +3,7 @@ comments: false
 date: 2012-01-27 21:40:39
 layout: post
 slug: mp32youtube-make-a-youtube-videos-list-from-your-mp3-library
-title: 'mp32youtube: make a youtube videos list from your mp3 library.'
+title: mp32youtube: make a youtube videos list from your mp3 library
 wordpress_id: 279
 tags: Audio,Python
 
