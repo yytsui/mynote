@@ -11,11 +11,11 @@ Lion Development Environment Setup
 
 Iterm2
 =======
-install iterm2
+install `iterm2 <http://www.iterm2.com/>`_
 
 Homebrew
 ========
-install homebrew https://github.com/mxcl/homebrew/wiki/installation
+install `homebrew <https://github.com/mxcl/homebrew/wiki/installation>`_
 
 .. code-block:: bash
 
@@ -81,6 +81,7 @@ PostgreSQL
     % initdb /usr/local/var/postgres #make sure this dir is empty, otherwise delete it and recreate it.
 
 If this is your first install, automatically load on login with:
+
 .. code-block:: bash
 
     % mkdir -p ~/Library/LaunchAgents
@@ -88,6 +89,7 @@ If this is your first install, automatically load on login with:
     % launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
 
 If this is an upgrade and you already have the homebrew.mxcl.postgresql.plist loaded:
+
 .. code-block:: bash
 
     % launchctl unload -w ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
@@ -95,11 +97,13 @@ If this is an upgrade and you already have the homebrew.mxcl.postgresql.plist lo
     % launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
 
 Or start manually with:
+
 .. code-block:: bash
 
  pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start
 
 And stop with:
+
 .. code-block:: bash
 
  pg_ctl -D /usr/local/var/postgres stop -s -m fast
@@ -160,7 +164,7 @@ Downlad and install, add a new service localhost, username and password are the 
 
 MySQL
 =====
-http://gpiot.com/mac-os-x-lion-the-perfect-setup-for-python-django/
+ Read the `instruction <http://gpiot.com/mac-os-x-lion-the-perfect-setup-for-python-django/>`_ here.
 
 Install
 -------
@@ -193,6 +197,7 @@ Start MySQL:
 
 (Then enter your root password)
 Create a new user and assign it all privileges on all databases, or on a specific database (up to you!).
+
 .. code-block:: bash
 
     mysql> CREATE USER 'username'@'localhost' IDENTIFIED BY 'password';
@@ -236,9 +241,7 @@ That should be fixed!
 pygame
 ======
 
-Pretty important to get the latest SDL_image.framework if you want actual PNG/JPEG support:
-
-http://www.libsdl.org/projects/SDL_image/
+Pretty important to get the latest `SDL_image.framework <http://www.libsdl.org/projects/SDL_image/>`_ if you want actual PNG/JPEG support:
 
 Otherwise it will only load Windows BMP files as you will see this during the build:
 
