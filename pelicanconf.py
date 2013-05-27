@@ -3,7 +3,7 @@
 from __future__ import unicode_literals
 
 AUTHOR = u'Yiyang'
-SITENAME = u'Notes about mobile and web programming'
+SITENAME = u'HeyHeyMyMy'
 SITEURL = ''
 
 TIMEZONE = 'Europe/Paris'
@@ -30,4 +30,4 @@ ARTICLE_DIR = 'posts'
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
-THEME = '/Users/emomo/note/pelican-themes/fresh'
+THEME = '/Users/emomo/note/pelican-themes/tuxlite_tbs'
