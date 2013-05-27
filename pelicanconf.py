@@ -30,4 +30,4 @@ ARTICLE_DIR = 'posts'
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
-THEME = '/Users/emomo/note/pelican-themes/tuxlite_tbs'
+THEME = '/Users/emomo/note/pelican-themes/fresh'
