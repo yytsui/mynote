@@ -96,20 +96,20 @@ at the same time  run in other terminal
 
 you should able to see something like...
 
-interface: any
-filter: (ip or ip6) and ( port 6379 )
-####
-T 127.0.0.1:52788 -> 127.0.0.1:6379 [AP]
-  *2..$6..SELECT..$1..0..
-##
-T 127.0.0.1:6379 -> 127.0.0.1:52788 [AP]
-  +OK..
-##
-T 127.0.0.1:52788 -> 127.0.0.1:6379 [AP]
-  *3..$3..SET..$4..city..$9..Vancouver.
-#
-T 127.0.0.1:6379 -> 127.0.0.1:52788 [AP]
-  +OK..
-#
+        interface: any
+        filter: (ip or ip6) and ( port 6379 )
+        ####
+        T 127.0.0.1:52788 -> 127.0.0.1:6379 [AP]
+          *2..$6..SELECT..$1..0..
+        ##
+        T 127.0.0.1:6379 -> 127.0.0.1:52788 [AP]
+          +OK..
+        ##
+        T 127.0.0.1:52788 -> 127.0.0.1:6379 [AP]
+          *3..$3..SET..$4..city..$9..Vancouver.
+        #
+        T 127.0.0.1:6379 -> 127.0.0.1:52788 [AP]
+          +OK..
+        #
 
 
