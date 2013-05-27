@@ -4,7 +4,7 @@ date: 2010-05-02 21:04:40
 layout: post
 slug: develope-with-remote-upstrem-but-rename-local-master-as-master-and-remote-master-as-upstream
 title: ' Develope with remote upstrem but  rename local master as master and remote
-  master as ''upstream'''
+  master as ''upstream'
 wordpress_id: 142
 tags: git
 
