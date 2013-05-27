@@ -12,9 +12,7 @@ about those "GET" or "POST" requests which involved read from or write to databa
 list, we have to make sure it's fast enough from cache 'fresh', i.e. not the stall records which have been already change in database?
 Django provides cache API to achieve this:
 
-
-    
-    
+    :::python
     from app.models import Stuff
     from django.core.cache import cache
     
@@ -33,9 +31,7 @@ This make sure the access is fast from cache as long as the 'stuff' is there, ot
 database and cached them. But what about making sure it's fresh? since it's possible to create, update and
 delete the data somewhere else? It turns out Django signals are the solution:
 
-
-    
-    
+    :::python
     from django.core.cache import cache
     from django.db.models import signals
     def make_sure_the_stuff_list_in_cache_is_fresh(request):
@@ -43,7 +39,6 @@ delete the data somewhere else? It turns out Django signals are the solution:
         cache_key.delete(cache_key)
     signals.post_save.connect(make_sure_the_stuff_list_in_cache_is_fresh, sender=Stuff)
     signals.post_delete.connect(make_sure_the_stuff_list_in_cache_is_fresh, sender=Stuff)
-    
 
 
 
