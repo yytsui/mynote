@@ -18,15 +18,14 @@ tags: deployment,Python,Web
         $tree /opt/redis
 
 so what we have now is:
-  <blockquote>
-     /opt/redis<br/>
-     └── bin<br/>
-       ├── redis-benchmark<br/>
-       ├── redis-check-aof<br/>
-       ├── redis-check-dump<br/>
-       ├── redis-cli<br/>
-       └── redis-server<br/>
-   </blockquote>
+
+         /opt/redis
+         └── bin
+           ├── redis-benchmark
+           ├── redis-check-aof
+           ├── redis-check-dump
+           ├── redis-cli
+           └── redis-server
 
 2. Init script /etc/init.d/redis
 
