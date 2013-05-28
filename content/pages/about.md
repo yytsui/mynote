@@ -9,4 +9,4 @@ wordpress_id: 111
 
 My name is Yiyang Tsui, and this is my weblog. I am a software programmer living in Canada west coast.
 
-You can email me at [![](/wp-content/uploads/2008/04/emailimage.png)](/wp-content/uploads/2008/04/emailimage.png)
+You can email me at ![emailimage](|filename|/images/emailimage.png)
