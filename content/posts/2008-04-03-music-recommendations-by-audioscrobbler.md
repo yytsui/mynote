@@ -13,6 +13,7 @@ For  example, if I know want to extend my music collections, asking other people
 
     
     
+    :::python
     from audioscrobbler import AudioScrobblerQuery
     import operator,sys
     
@@ -43,30 +44,31 @@ For  example, if I know want to extend my music collections, asking other people
 
 Here are the two examples to run this function in IPython shell:
 
-In [3]: getRecommendations('U2')
-Out[3]:
-[('Red Hot Chili Peppers', 757),
-('Coldplay', 669),
-('The Beatles', 532),
-('Nirvana', 423),
-('Aerosmith', 409),
-('R.E.M.', 401),
-('Moby', 381),
-('Queen', 379),
-('Pink Floyd', 378),
-('Green Day', 376)]
+            :::bash
+            In [3]: getRecommendations('U2')
+            Out[3]:
+            [('Red Hot Chili Peppers', 757),
+            ('Coldplay', 669),
+            ('The Beatles', 532),
+            ('Nirvana', 423),
+            ('Aerosmith', 409),
+            ('R.E.M.', 401),
+            ('Moby', 381),
+            ('Queen', 379),
+            ('Pink Floyd', 378),
+            ('Green Day', 376)]
 
-In [4]: getRecommendations('Belle and Sebastian')
-Out[4]:
-[('The Beatles', 960),
-('Radiohead', 829),
-('The Smiths', 580),
-('Cat Power', 529),
-('The Arcade Fire', 478),
-('The White Stripes', 469),
-('Elliott Smith', 431),
-('of Montreal', 424),
-('The Shins', 411),
-('Bob Dylan', 390)]
+            In [4]: getRecommendations('Belle and Sebastian')
+            Out[4]:
+            [('The Beatles', 960),
+            ('Radiohead', 829),
+            ('The Smiths', 580),
+            ('Cat Power', 529),
+            ('The Arcade Fire', 478),
+            ('The White Stripes', 469),
+            ('Elliott Smith', 431),
+            ('of Montreal', 424),
+            ('The Shins', 411),
+            ('Bob Dylan', 390)]
 
 Depending on my years of rock music listening experience, I think the results are quite impressive :)

@@ -13,8 +13,8 @@ step 1.
 
 put this in urls.py
 
-    
-    r'^site_media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': '/path/to/media'}),
+    :::python
+    (r'^site_media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': '/path/to/media'}),
 
 
 
@@ -24,7 +24,10 @@ so now the file /path/to/media/js/myscript.js will be made available at the URL 
 
 step 2.
 
-In the template file, change the javascript directive line to  <script src="/site_media/js/myscript.js" type="text/javascript"></script>
+In the template file, change the javascript directive line to  
+    
+        :::html
+        <script src="/site_media/js/myscript.js" type="text/javascript"></script>
 
 That's it.However,there is a "big, fat disclaimer" in the document which said "
 

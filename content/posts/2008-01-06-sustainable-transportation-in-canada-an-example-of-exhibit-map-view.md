@@ -3,7 +3,7 @@ comments: true
 date: 2008-01-06 22:10:52
 layout: post
 slug: sustainable-transportation-in-canada-an-example-of-exhibit-map-view
-title: 'Sustainable transportation in Canada: An example of Exhibit map view'
+title: Sustainable transportation in Canada: An example of Exhibit map view
 wordpress_id: 27
 tags: Google Maps,Javascript,Python,Web
 
@@ -13,6 +13,7 @@ By using [Exhibit 2.0](http://simile.mit.edu/exhibit/), a  Javascript library wh
 
     
     
+    :::python
     import csv,re
     from geopy import geocoders
     import simplejson
