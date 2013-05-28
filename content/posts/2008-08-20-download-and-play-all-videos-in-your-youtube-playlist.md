@@ -7,11 +7,11 @@ title: Download (and play) all videos in your Youtube playlist
 wordpress_id: 74
 tags: Python,Web,youtube
 
-[Last time](/python/download-all-videos-in-your-youtube-playlist) I wrote a program to download all videos in playlists,would it be nice if I can watch all these video one by one while downloading?  What we have to do is starting two threads, one for downloading and put the videos in queue and the other thread trying to get videos  from the queue and playing them.
+[Last time](/download-all-videos-in-your-youtube-playlist.html) I wrote a program to download all videos in playlists,would it be nice if I can watch all these video one by one while downloading?  What we have to do is starting two threads, one for downloading and put the videos in queue and the other thread trying to get videos  from the queue and playing them.
 
 
     
-    
+    :::python
     def download_and_play(video_lists):
     	q = Queue(32)
     	threads = []

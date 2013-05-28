@@ -11,6 +11,7 @@ Sometimes I want to watch the videos of my or even my friend's Youtube playlists
 
     
     
+    :::python
     import feedparser, urllib, re, sys
     #download http://www.arrakis.es/~rggi3/youtube-dl/youtube-dl and then rename it to youtube-dl
     from youtubeDL import FileDownloader, YoutubeIE, MetacafeIE, YoutubePlaylistIE, DownloadError
@@ -80,9 +81,10 @@ Sometimes I want to watch the videos of my or even my friend's Youtube playlists
 
 Just put youtubeDL.py  and this script file as playlists-dl.py in the same directory, and change 'your_youtube_username_here' to your user name  then run python playlists-dl.py then all the video clips in all your playlists will be downloaded :).
 
-Todo:
-1. let user can specify username in command line.
-2. if user specify the playlists id, then just download videos in those playlist.
-3. use multi-thread to save total download time.
-4. play the downloaded videos while other download still going on ...
-5. ...
+  Todo:
+
+* let user can specify username in command line.
+* if user specify the playlists id, then just download videos in those playlist.
+* use multi-thread to save total download time.
+* play the downloaded videos while other download still going on ...
+* ...
