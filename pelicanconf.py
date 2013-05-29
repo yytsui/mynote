@@ -6,7 +6,7 @@ AUTHOR = u'Yiyang'
 SITENAME = u'HeyHeyMyMy'
 SITEURL = ''
 
-TIMEZONE = 'Europe/Paris'
+TIMEZONE = 'Canada/Pacific'
 
 DEFAULT_LANG = u'en'
 
