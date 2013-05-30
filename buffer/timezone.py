@@ -53,11 +53,14 @@ dt_aware.utcoffset()
 
 # <codecell>
 
-dt_aware.astimezone(utc)
+dt_utc = dt_aware.astimezone(utc)
 
 # <codecell>
 
-dt_aware.astimezone(utc).strftime("%Y-%m-%d %H:%M:%S %Z")
+#dt_aware.astimezone(utc).strftime("%Y-%m-%d %H:%M:%S %Z")
+print dt_aware.strftime("%Y-%m-%d %H:%M:%S %Z")
+print dt_utc.strftime("%Y-%m-%d %H:%M:%S %Z")
+
 
 # <codecell>
 
