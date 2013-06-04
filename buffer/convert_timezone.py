@@ -1,6 +1,6 @@
 
 from datetime import datetime
-import pytz
+import pytz #run "pip install pytz" if you have not installed it yet.
 
 TIME_FORMAT = "%Y-%m-%d %H:%M:%S %Z%z"
 
