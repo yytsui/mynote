@@ -4,32 +4,34 @@ import pytz
 
 TIME_FORMAT = "%Y-%m-%d %H:%M:%S %Z%z"
 
-def convert_timezone(to_tz, dt):
+def convert_timezone(from_tz, to_tz, dt):
     """
-    get to_tz identifier from:
+    get from_tz, to_tz identifier from:
        http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
     dt: datetime object
     """
+    _from_tz = pytz.timezone(from_tz)
+    dt_from_aware = _from_tz.localize(dt)
     _to_tz = pytz.timezone(to_tz)
-    dt_to = _to_tz.normalize(dt.astimezone(_to_tz))
-    return dt_to
+    dt_to_aware = _to_tz.normalize(dt_from_aware.astimezone(_to_tz))
+    return dt_from_aware, dt_to_aware
 
 
 def test_now():
-    #The preferred way of dealing with times is to always work in UTC, 
-    #converting to localtime only when generating output to be read by humans.
+    """
+    The preferred way of dealing with times is to always work in UTC, 
+    converting to localtime only when generating output to be read by humans.
+    http://pytz.sourceforge.net/
+    """
     dt_now = datetime.now() #naive datetime object
-    print dt_now.strftime(TIME_FORMAT)
-    pacific = pytz.timezone('US/Pacific')
-    dt_now_aware = pacific.localize(dt_now)
-    print dt_now_aware.strftime(TIME_FORMAT)
-    dt_now_converted = convert_timezone('US/Eastern', dt_now_aware)
-    print dt_now_converted.strftime(TIME_FORMAT)
-    timediff = dt_now_converted - dt_now_aware
-    assert timediff.total_seconds() == 0
+    dt_from_aware, dt_to_aware = convert_timezone('Canada/Pacific', 'Canada/Eastern',dt_now)
+    timediff = dt_to_aware - dt_from_aware
 
-    print dt_now_aware.hour
-    print dt_now_converted.hour
+    assert timediff.total_seconds() == 0
+    assert dt_to_aware.hour - dt_from_aware.hour == 3
+    print dt_from_aware.strftime(TIME_FORMAT)
+    print dt_to_aware.strftime(TIME_FORMAT)
+
 
 
 if __name__ == '__main__':
