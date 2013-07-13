@@ -23,6 +23,11 @@
     color: #49AFCD;
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 }
+
+
+.navbar .nav > li > a:hover { 
+    color: #FFFFFF;
+}
 .navbar .divider-vertical { border-right: 1px solid #4D4D4D; }
 .navbar { margin-bottom: 4em; } 
 
