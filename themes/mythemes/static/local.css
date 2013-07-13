@@ -37,6 +37,9 @@
     padding: 8px 20px 12px;
 }
 
+.navbar .container {
+    width: 1170px;
+}
 
 /* Styling for elements */
 body { font-size: 100%; }
