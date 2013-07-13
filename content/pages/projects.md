@@ -7,7 +7,7 @@ title: Projects
 wordpress_id: 263
 
 
-Check my past and on-going [web](http://heyheymymy.net/projects.html) and [mobile app](http://heyheymymy.net/mobile_app.html) projects.
+Check my past and on-going [web](/pages/projects.html) and [mobile app](/pages/Mobiles.html) projects.
 
 <div class="container">
             <div class="span12">
