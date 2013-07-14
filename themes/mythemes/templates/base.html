@@ -11,8 +11,7 @@
         <script src="{{ SITEURL }}/theme/html5.js"></script>
         <![endif]-->
         <!-- Le styles -->
-        <link href="{{ SITEURL }}/theme/bootstrap.min.css" rel="stylesheet">
-        <link href="{{ SITEURL }}/theme/bootstrap.min.responsive.css" rel="stylesheet">
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link href="{{ SITEURL }}/theme/local.css" rel="stylesheet">
         <link href="{{ SITEURL }}/theme/pygments.css" rel="stylesheet">
     </head>
@@ -59,9 +58,10 @@
             <p><a href="{{ SITEURL }}">{{ SITENAME }}</a> &copy; {{ AUTHOR }} 2012</p>
             </footer>
         </div> <!-- /container -->
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-        <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-collapse.js"></script>
-        {% include "analytics.html" %}
+         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+         <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+
+           {% include "analytics.html" %}
         {% include "github.html" %} 
     </body>
 </html>
