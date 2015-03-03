@@ -1,0 +1,84 @@
+1.Tailor
+------------bzr2git.conf-----------------------------
+[DEFAULT]
+verbose = True
+patch-name-format = ""
+
+[project]
+source = bzr:source
+target = git:target
+start-revision = INITIAL
+root-directory = /tmp/server-gitrepo
+root-directory =  /home/yiyang/tmp/kk
+
+state-file = tailor.state
+
+[bzr:source]
+repository = /home/yiyang/devel/openerp/openerp/server
+
+
+[git:target]
+repository = /home/yiyang/tmp/kk
+branch = momo
+branchpoint = it_seems_unrelvant_at_this_moment?
+----------------------------------------------
+http://progetti.arstecnica.it/tailor/wiki/GitRepository
+
+.Init a git repo
+mkdir /home/yiyang/tmp/kk
+cd kk
+.make the 'master' branch
+touch an-unrelevant-file-or-else
+git commit -a 
+
+.import git repo
+tailor -D -c bzr2git.conf
+==> now the bzr repo was imported as 'momo' branch
+==> and there is also a .bzr info , so this is also a bzr branch can be work on
+note: to make it easy, we do not work on momo branch and bzr here in local git repo, we just use it to 
+sync, if we really want to work on bzr upstream, then cd to bzr upstream and work in there, then sync
+==> also there are some info add in .git/info/exclude
+from git faq: How do I tell git to ignore files?
+You can put shell-style globs (e.g. *.o) in either .git/info/exclude or .gitignore.
+.git/info/exclude is local to your repository only, and not shared by others who might fetch from your repository.
+.gitignore is more commonly used, as it can be checked into the repository and thereby automatically shared with all users of the project. 
+
+now the branch looks like
+o-o-o-o momo
+o       master
+
+So we have to rebase momo into master
+git checkout momo
+git rebase master
+
+from now on, if something change in bzr upstrem repo
+we can just run 
+tailor -D -c bzr2git.conf
+to sync git branch momo with bzr upstream
+
+
+
+2. bzr fast-export | git fast-import
+
+ To produce data destined for import into Bazaar:
+
+   bzr fast-export --no-plain my-bzr-branch my.fi.gz
+
+ To produce data destined for Git 1.6:
+
+   bzr fast-export --plain my-bzr-branch my.fi
+
+ To import several unmerged but related branches into the same repository,
+ use the --{export,import}-marks options, and specify a name for the git
+ branch like this:
+
+   bzr fast-export --export-marks=marks.bzr project.dev |
+          GIT_DIR=project/.git git-fast-import --export-marks=marks.git
+
+   bzr fast-export --import-marks=marks.bzr -b other project.other |
+          GIT_DIR=project/.git git-fast-import --import-marks=marks.git
+
+3.git-bzr
+
+
+
